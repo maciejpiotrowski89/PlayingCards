@@ -7,6 +7,6 @@
 
 import Foundation
 
-public enum Suit {
-    case diamonds, clubs, hearts, spades
+public enum Suit: UInt, CaseIterable {
+    case diamonds = 0, clubs, hearts, spades
 }

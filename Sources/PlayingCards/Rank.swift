@@ -1,6 +1,6 @@
 import Foundation
 
-public enum Rank {
- case ace, two, three, four, five, six, seven, eight, nine, ten, jack, queen, king
+public enum Rank: UInt, CaseIterable {
+ case ace = 1, two, three, four, five, six, seven, eight, nine, ten, jack, queen, king
 }
 
