@@ -46,5 +46,30 @@ class CardTests: XCTestCase {
             XCTAssertEqual(cards.count, n, "Creating cards failure for n = \(n)")
         }
     }
+    
+    func testCardsAreEqual() {
+        //Given
+        let card1 = Card(suit: .diamonds, rank: .king)
+        let card2 = Card(suit: .diamonds, rank: .king)
+        
+        //When
+        let equal = card1 == card2
+        
+        //Then
+        XCTAssertTrue(equal)
+    }
 
+    func testCardsAreNotEqual() {
+        //Given
+        let card1 = Card(suit: .diamonds, rank: .king)
+        let card2 = Card(suit: .clubs, rank: .king)
+        
+        //When
+        let equal = card1 == card2
+        
+        //Then
+        XCTAssertFalse(equal)
+    }
+
+    
 }

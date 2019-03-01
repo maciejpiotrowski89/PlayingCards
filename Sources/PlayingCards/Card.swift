@@ -30,3 +30,5 @@ public struct Card {
         return suit.rawValue * UInt(Rank.allCases.count) + rank.rawValue
     }
 }
+
+extension Card: Equatable { }
