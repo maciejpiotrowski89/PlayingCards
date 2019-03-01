@@ -7,6 +7,11 @@ public struct Card {
         return Card.id(for: rank, suit: suit)
     }
     
+    public init(suit: Suit, rank: Rank) {
+        self.suit = suit
+        self.rank = rank
+    }
+    
     public static func createCards(_ numberOfCards: Int) -> [Card] {
         var cards: [Card] = []
         
